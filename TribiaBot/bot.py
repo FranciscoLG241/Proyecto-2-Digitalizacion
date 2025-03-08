@@ -3,13 +3,13 @@ import json
 import random
 import asyncio
 
-TOKEN = "MTM0Nzg4ODE3NTUxODk3ODA2OA.GcOpqJ.8KOvdsftDE8GY8MFLSRXaU687WPcevx_NTn_0A"  # Pega aquí el token de tu bot
+TOKEN = "MTM0Nzg4ODE3NTUxODk3ODA2OA.GcOpqJ.8KOvdsftDE8GY8MFLSRXaU687WPcevx_NTn_0A" 
 
 intents = discord.Intents.default()
-intents.message_content = True  # Habilita la lectura de mensajes
+intents.message_content = True 
 client = discord.Client(intents=intents)
 
-# Cargar preguntas desde JSON
+
 def cargar_preguntas():
     with open("preguntas.json", "r", encoding="utf-8") as file:
         return json.load(file)
