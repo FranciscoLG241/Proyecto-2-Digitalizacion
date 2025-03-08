@@ -28,5 +28,5 @@ Este bot está diseñado en **Python** usando la librería `discord.py` y funcio
 Para obtener una copia del proyecto, clónalo en tu máquina local:
 
 ```bash
-
+https://github.com/FranciscoLG241/Proyecto-2-Digitalizacion.git
 
