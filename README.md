@@ -60,6 +60,8 @@ Reemplaza la línea TOKEN = "tu_token_aqui" con el token de tu bot que copiaste 
 TOKEN = "tu_token_aqui"
 ```
 
+---
+
 ### 5. Configura las preguntas de trivia
 El bot utiliza un archivo preguntas.json para almacenar las preguntas y respuestas. Asegúrate de que tu archivo preguntas.json contenga preguntas en formato JSON como este ejemplo:
 
