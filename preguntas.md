@@ -3,13 +3,13 @@
 - En el caso de TriviaBot, los datos generados están principalmente relacionados con las preguntas de trivia y las respuestas de los usuarios. 
 El ciclo de vida de estos datos es el siguiente:
 
-- Generación de los datos: Los datos se generan cuando el bot carga el archivo preguntas.json que contiene las preguntas y respuestas de trivia. 
+1. Generación de los datos: Los datos se generan cuando el bot carga el archivo preguntas.json que contiene las preguntas y respuestas de trivia. 
 Estos datos son leídos cada vez que el bot selecciona una pregunta aleatoria.
 
-- Uso de los datos: Cuando un usuario ejecuta el comando !trivia, el bot selecciona una pregunta de los datos y la presenta al usuario. 
+2. Uso de los datos: Cuando un usuario ejecuta el comando !trivia, el bot selecciona una pregunta de los datos y la presenta al usuario. 
 Luego, espera la respuesta del usuario y compara esta respuesta con la correcta.
 
-- Eliminación de los datos: Los datos relacionados con las respuestas no se almacenan de forma persistente en el sistema. Una vez que la 
+3. Eliminación de los datos: Los datos relacionados con las respuestas no se almacenan de forma persistente en el sistema. Una vez que la 
 pregunta se responde (correcta o incorrecta), la interacción termina y no se conserva un historial de respuestas.
 
 ---
@@ -46,7 +46,9 @@ Además, ayudaría a los estudiantes a mejorar su comprensión del material y a 
 ## Tecnologías Habilitadoras Digitales (2g)
 1. ¿Qué tecnologías habilitadoras digitales (THD) has utilizado o podrías integrar en tu proyecto?
 - En este caso, TriviaBot hace uso de tecnologías habilitadoras digitales simples, como la automatización de interacciones a través de Discord
-y la interacción en tiempo real utilizando APIs de Discord. Para enriquecer un poco mas el bot, se podrían integrar THD como el aprendizaje automático
+y la interacción en tiempo real utilizando APIs de Discord.
+
+- Para enriquecer un poco mas el bot, se podrían integrar THD como el aprendizaje automático
 para adaptar las preguntas según el nivel de conocimiento del usuario, o incluso procesamiento de lenguaje natural para interpretar las
 respuestas de los usuarios y hacer el bot aún más interactivo.
 
