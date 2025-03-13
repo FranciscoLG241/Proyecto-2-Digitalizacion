@@ -1,0 +1,76 @@
+[
+    {
+        "pregunta": "¿Cuál es la capital de Francia?",
+        "respuesta": "París"
+    },
+    {
+        "pregunta": "¿Cuánto es 5 + 7?",
+        "respuesta": "12"
+    },
+    {
+        "pregunta": "¿De qué color es el cielo en un día despejado?",
+        "respuesta": "Azul"
+    },
+
+
+    {
+        "pregunta": "¿Cuál es el continente más grande?",
+        "respuesta": "Asia"
+    },
+    {
+        "pregunta": "¿Cuántos planetas tiene el sistema solar?",
+        "respuesta": "8"
+    },
+    {
+        "pregunta": "¿Quién pintó la Mona Lisa?",
+        "respuesta": "Leonardo da Vinci"
+    },
+    {
+        "pregunta": "¿En qué año llegó el hombre a la Luna?",
+        "respuesta": "1969"
+    },
+    {
+        "pregunta": "¿Cuál es la capital de Japón?",
+        "respuesta": "Tokio"
+    },
+    {
+        "pregunta": "¿Cuántos jugadores hay en un equipo de fútbol?",
+        "respuesta": "11"
+    },
+    {
+        "pregunta": "¿De qué color es el sol?",
+        "respuesta": "Amarillo"
+    },
+    {
+        "pregunta": "¿En qué continente se encuentra el desierto del Sahara?",
+        "respuesta": "África"
+    },
+    {
+        "pregunta": "¿Cuál es el río más largo del mundo?",
+        "respuesta": "Amazonas"
+    },
+    {
+        "pregunta": "¿Cuántos huesos tiene el cuerpo humano?",
+        "respuesta": "206"
+    },
+    {
+        "pregunta": "¿Qué animal es conocido como el rey de la selva?",
+        "respuesta": "León"
+    },
+    {
+        "pregunta": "¿Qué es el ADN?",
+        "respuesta": "Ácido desoxirribonucleico"
+    },
+    {
+        "pregunta": "¿Cuál es el país con más habitantes del mundo?",
+        "respuesta": "China"
+    },
+    {
+        "pregunta": "¿Qué tipo de animal es el delfín?",
+        "respuesta": "Mamífero"
+    },
+    {
+        "pregunta": "¿Qué gas respiramos para vivir?",
+        "respuesta": "Oxígeno"
+    }
+]
