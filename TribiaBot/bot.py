@@ -11,6 +11,14 @@ client = discord.Client(intents=intents)
 
 # Cargar preguntas desde JSON
 def cargar_preguntas():
+    """
+    Carga las preguntas de trivia desde un archivo JSON.
+
+    Abre el archivo preguntas.json, lee su contenido y lo devuelve como una lista de diccionarios.
+
+    Returns:
+        list: Lista de preguntas de trivia en formato diccionario, cada uno con una clave 'pregunta' y 'respuesta'.
+    """
     with open("preguntas.json", "r", encoding="utf-8") as file:
         return json.load(file)
 
@@ -18,10 +26,24 @@ preguntas = cargar_preguntas()
 
 @client.event
 async def on_ready():
+    """
+    Evento que se ejecuta cuando el bot se conecta correctamente a Discord.
+
+    En este evento, el bot imprime un mensaje indicando que está listo para recibir comandos.
+    """
     print(f"✅ Bot conectado como {client.user}")
 
 @client.event
 async def on_message(message):
+    """
+    Evento que se ejecuta cuando el bot recibe un mensaje.
+
+    Si el mensaje es el comando '!trivia', el bot selecciona una pregunta aleatoria
+    y espera 10 segundos para que el usuario responda.
+
+    Args:
+        message (discord.Message): El mensaje recibido por el bot.
+    """
     if message.author == client.user:
         return
 
@@ -33,6 +55,16 @@ async def on_message(message):
         await message.channel.send(f"🎲 Trivia: {pregunta_texto}\nTienes 10 segundos para responder.")
 
         def check(m):
+            """
+            Función de verificación para asegurarse de que el mensaje recibido
+            es del autor correcto y en el canal correcto.
+
+            Args:
+                m (discord.Message): El mensaje que se va a verificar.
+
+            Returns:
+                bool: True si el mensaje es del autor correcto y en el canal correcto, False en caso contrario.
+            """
             return m.author == message.author and m.channel == message.channel
         
         try:
