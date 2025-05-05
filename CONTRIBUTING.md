@@ -68,8 +68,6 @@ Para contribuir a TriviaBot, se recomienda tener experiencia con las siguientes 
 - **Discord API**: Familiaridad con la librería `discord.py` para interactuar con la API de Discord.
   
 - **Manejo de JSON**: Habilidad para trabajar con archivos JSON, ya que el bot depende de este formato para almacenar las preguntas de trivia.
-  
-- **Desarrollo Asincrónico**: Conocimiento de `asyncio` en Python para manejar tareas asincrónicas, como la espera de respuestas de los usuarios.
 
 ---
 
