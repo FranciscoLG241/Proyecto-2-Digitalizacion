@@ -1,142 +1,142 @@
-# Guía de Contribución a TriviaBot
+# Contribution Guide for TriviaBot
 
-¡Gracias por tu interés en contribuir a TriviaBot! Este proyecto es open source y está abierto a mejoras de la comunidad.
+Thank you for your interest in contributing to TriviaBot! This project is open source and is open to community improvements.
 
-## Objetivo Actual del Software
+## Current Software Goal
 
-TriviaBot es una herramienta de trivia interactiva diseñada para ser usada en servidores de Discord. Su propósito es proporcionar a los usuarios una forma entretenida de interactuar entre sí a través de preguntas y respuestas de trivia. El bot selecciona aleatoriamente una pregunta, permite a los usuarios responder dentro de un tiempo limitado y brinda retroalimentación según la respuesta del usuario. Este software cubre las necesidades actuales de entretenimiento dentro de comunidades de Discord, promoviendo la participación y el aprendizaje de manera divertida.
-
----
-
-## Necesidades Futuras y Mejoras Propuestas
-
-A medida que el proyecto crece, se identifican varias necesidades que podrían expandir su funcionalidad y aumentar su impacto:
-
-### Mejoras de Funcionalidad
-- **Ampliar el conjunto de preguntas**: Actualmente, el bot se basa en un archivo JSON local para las preguntas. Se podría integrar una API de trivia en línea para obtener preguntas dinámicas y actualizadas.
-- **Soporte multilingüe**: Permitir que el bot sea utilizado en diferentes idiomas para llegar a una audiencia más amplia.
-- **Clasificación y puntuación**: Añadir un sistema de puntuación para llevar el registro de las mejores puntuaciones y fomentar la competencia entre los jugadores.
-- **Personalización de preguntas**: Permitir a los administradores de servidores crear sus propias preguntas de trivia desde una interfaz fácil de usar.
+TriviaBot is an interactive trivia tool designed to be used in Discord servers. Its purpose is to provide users with an entertaining way to interact with each other through trivia questions and answers. The bot randomly selects a question, allows users to respond within a limited time, and provides feedback based on the user's answer. This software addresses the current entertainment needs within Discord communities, promoting engagement and learning in a fun way.
 
 ---
 
-## Interacción de los Sistemas y Datos
+## Future Needs and Proposed Improvements
 
-El bot funciona de manera autónoma dentro de un servidor de Discord. Los principales componentes del sistema son:
+As the project grows, several needs have been identified that could expand its functionality and increase its impact:
 
-1. **Comando de trivia (`!trivia`)**: Los usuarios pueden invocar el bot en cualquier canal con el comando `!trivia`. Esto genera una interacción donde el bot selecciona una pregunta aleatoria de un archivo JSON local.
-2. **Respuesta del usuario**: Los usuarios tienen 10 segundos para responder a la pregunta. El bot verifica la respuesta utilizando una función que compara la entrada del usuario con la respuesta correcta.
-3. **Retroalimentación**: Si la respuesta es correcta, el bot felicita al usuario; si es incorrecta o el tiempo se agota, muestra la respuesta correcta.
+### Functional Improvements
+- **Expand the question set**: Currently, the bot relies on a local JSON file for the questions. It could integrate an online trivia API to get dynamic and up-to-date questions.
+- **Multilingual support**: Allow the bot to be used in different languages to reach a broader audience.
+- **Ranking and scoring**: Add a scoring system to track the best scores and encourage competition among players.
+- **Custom question creation**: Allow server administrators to create their own trivia questions through an easy-to-use interface.
 
-### Ejemplo de flujo de datos:
-1. **Entrada**: Usuario ejecuta `!trivia`.
-2. **Procesamiento**: El bot selecciona una pregunta aleatoria desde el archivo `preguntas.json` y espera una respuesta durante 10 segundos.
-3. **Salida**: El bot responde con un mensaje de felicitaciones o muestra la respuesta correcta.
+---
 
-### Estructura de Datos:
-El archivo `preguntas.json` contiene una lista de objetos con preguntas y respuestas en formato JSON:
+## System and Data Interaction
+
+The bot operates autonomously within a Discord server. The main components of the system are:
+
+1. **Trivia Command (`!trivia`)**: Users can invoke the bot in any channel with the `!trivia` command. This generates an interaction where the bot selects a random question from a local JSON file.
+2. **User's Answer**: Users have 10 seconds to answer the question. The bot verifies the answer by comparing the user's input with the correct answer.
+3. **Feedback**: If the answer is correct, the bot congratulates the user; if it is incorrect or the time runs out, the bot shows the correct answer.
+
+### Example of data flow:
+1. **Input**: User runs `!trivia`.
+2. **Processing**: The bot selects a random question from the `preguntas.json` file and waits for a response for 10 seconds.
+3. **Output**: The bot responds with a congratulatory message or shows the correct answer.
+
+### Data Structure:
+The `preguntas.json` file contains a list of objects with trivia questions and answers in JSON format:
 
 ```json
 [
   {
-    "pregunta": "¿Cuál es el continente más grande?",
+    "pregunta": "What is the largest continent?",
     "respuesta": "Asia"
   },
   {
-    "pregunta": "¿Quién pintó la Mona Lisa?",
+    "pregunta": "Who painted the Mona Lisa?",
     "respuesta": "Leonardo da Vinci"
   }
 ]
 ```
 
-## Propuestas para Mejorar la Interoperabilidad
+## Proposals to Improve Interoperability
 
-El bot actualmente depende de datos estáticos (el archivo `preguntas.json`) para funcionar. Aquí hay algunas propuestas para mejorar la interoperabilidad:
+The bot currently relies on static data (the `preguntas.json` file) to function. Here are some proposals to improve interoperability:
 
-- **Integración con APIs externas de trivia**: Esto permitiría que el bot pueda obtener preguntas actualizadas y diversificadas de forma dinámica sin necesidad de actualizar el archivo manualmente. Ejemplos incluyen la [Open Trivia Database](https://opentdb.com/) o [JService](https://jservice.io/).
+- **Integration with external trivia APIs**: This would allow the bot to obtain updated and diversified questions dynamically without the need to manually update the file. Examples include the [Open Trivia Database](https://opentdb.com/) or [JService](https://jservice.io/).
   
-- **Interacción con otras plataformas de chat**: En el futuro, TriviaBot podría expandirse a otras plataformas de mensajería como **Slack** o **Telegram** para ofrecer soporte a una comunidad más amplia.
+- **Interaction with other chat platforms**: In the future, TriviaBot could expand to other messaging platforms such as **Slack** or **Telegram** to provide support to a larger community.
 
 ---
 
-## Habilidades Necesarias para Contribuir
+## Skills Needed to Contribute
 
-Para contribuir a TriviaBot, se recomienda tener experiencia con las siguientes habilidades y tecnologías:
+To contribute to TriviaBot, it is recommended to have experience with the following skills and technologies:
 
-- **Python 3.8+**: El bot está desarrollado en Python, por lo que es fundamental tener conocimientos de este lenguaje.
+- **Python 3.8+**: The bot is developed in Python, so knowledge of this language is essential.
   
-- **Discord API**: Familiaridad con la librería `discord.py` para interactuar con la API de Discord.
+- **Discord API**: Familiarity with the `discord.py` library to interact with the Discord API.
   
-- **Manejo de JSON**: Habilidad para trabajar con archivos JSON, ya que el bot depende de este formato para almacenar las preguntas de trivia.
+- **JSON Handling**: Ability to work with JSON files, as the bot depends on this format to store trivia questions.
 
 ---
 
-## Estrategias de Capacitación para Colaboradores
+## Training Strategies for Contributors
 
-Si deseas contribuir o convertirte en colaborador activo del proyecto, aquí te dejamos algunas estrategias para facilitar el proceso de integración:
+If you wish to contribute or become an active collaborator on the project, here are some strategies to facilitate the integration process:
 
-- **Documentación Interna**: Asegúrate de leer la documentación interna del código y las guías de estilo de Python. Esto ayudará a que tu código siga las mismas convenciones que el proyecto.
+- **Internal Documentation**: Make sure to read the internal code documentation and Python style guides. This will help ensure your code follows the same conventions as the rest of the project.
   
-- **Revisión de Código**: Los nuevos colaboradores deben someter sus cambios a revisión a través de un Pull Request. Esto garantiza que el código cumple con los estándares de calidad y funciona correctamente.
+- **Code Review**: New contributors should submit their changes for review via a Pull Request. This ensures the code meets quality standards and functions correctly.
   
-- **Pruebas Unitarias**: Desarrolla pruebas unitarias para cualquier nueva funcionalidad o mejora. Esto facilitará la detección de errores y mejorará la estabilidad del proyecto.
+- **Unit Tests**: Develop unit tests for any new functionality or improvement. This will help catch errors and improve the project's stability.
   
-- **Sesiones de Capacitación**: Para los colaboradores nuevos, ofrecemos sesiones de capacitación sobre cómo contribuir al proyecto, cómo clonar y trabajar con el repositorio, y cómo ejecutar el bot localmente.
+- **Training Sessions**: For new contributors, we offer training sessions on how to contribute to the project, how to clone and work with the repository, and how to run the bot locally.
   
-- **Guía de Estilo**: Consulta la guía de estilo para garantizar que el código sea claro y consistente con el resto del proyecto. Aquí se incluyen pautas para la documentación del código, los nombres de funciones, y el formato de los commits.
+- **Style Guide**: Refer to the style guide to ensure the code is clear and consistent with the rest of the project. This includes guidelines for code documentation, function names, and commit formats.
 
 ---
 
-## ¿Cómo Contribuir?
+## How to Contribute
 
-1. **Haz un fork** del repositorio.
+1. **Fork** the repository.
 
-2. **Clona tu fork localmente**:
+2. **Clone your fork locally**:
 
     ```bash
     git clone https://github.com/FranciscoLG241/TriviaBot.git
     cd TriviaBot
     ```
 
-3. **Crea una rama** para tu contribución:
+3. **Create a branch** for your contribution:
 
     ```bash
-    git checkout -b mi-mejora
+    git checkout -b my-improvement
     ```
 
-4. Realiza los cambios necesarios y **escribe tests** si aplica.
+4. Make the necessary changes and **write tests** if applicable.
 
-5. **Haz commits claros y concisos**:
+5. **Make clear and concise commits**:
 
     ```bash
-    git commit -m "Agrega nueva funcionalidad de puntuación"
+    git commit -m "Add new scoring functionality"
     ```
 
-6. **Haz push a tu fork**:
+6. **Push to your fork**:
 
     ```bash
-    git push origin mi-mejora
+    git push origin my-improvement
     ```
 
-7. **Abre un Pull Request** en el repositorio original.
+7. **Open a Pull Request** on the original repository.
 
 ---
 
-## Estilo de código
+## Code Style
 
-- Usa **Python 3.8** o superior.
-- Sigue la **guía de estilo de Python (PEP8)**.
-- **Documenta funciones** con docstrings.
-- Usa **nombres descriptivos** para funciones y variables.
+- Use **Python 3.8** or higher.
+- Follow the **Python style guide (PEP8)**.
+- **Document functions** with docstrings.
+- Use **descriptive names** for functions and variables.
 
 ---
 
-## Reportar errores o sugerencias
+## Reporting Bugs or Suggestions
 
-Puedes abrir un **issue** para:
+You can open an **issue** to:
 
-- Informar de errores.
-- Sugerir mejoras o nuevas funcionalidades.
-- Pedir ayuda o clarificación.
+- Report bugs.
+- Suggest improvements or new features.
+- Ask for help or clarification.
 
 ---
