@@ -1,31 +1,31 @@
 # TriviaBot
 
-**TriviaBot** es un bot de Discord que permite a los usuarios jugar a un juego de trivia directamente en su servidor de Discord. El bot selecciona una pregunta al azar y le da al usuario 10 segundos para responder correctamente. Si la respuesta es correcta, el bot felicita al jugador; si no, muestra la respuesta correcta.
+**TriviaBot** is a Discord bot that allows users to play a trivia game directly in their Discord server. The bot selects a random question and gives the user 10 seconds to answer correctly. If the answer is correct, the bot congratulates the player; if not, it shows the correct answer.
 
-Este bot está diseñado en **Python** usando la librería `discord.py` y funciona de forma sencilla y eficiente en cualquier servidor de Discord.
+This bot is built in Python using the discord.py library and works simply and efficiently on any Discord server.
 
 ---
 
-## Funcionalidades
+## Features
 
-- Responde al comando `!trivia` con una pregunta de trivia.
-- Los jugadores tienen 10 segundos para responder a cada pregunta.
-- Si la respuesta es correcta, el bot felicita al jugador.
-- Si la respuesta es incorrecta o el tiempo se agota, el bot muestra la respuesta correcta.
+- Responds to the `!trivia` command with a trivia question.
+- Players have 10 seconds to answer each question.
+- If the answer is correct, the bot congratulates the player.
+- If the answer is incorrect or time runs out, the bot shows the correct answer.
   
-## Tecnologías usadas
+## Technologies Used
 
-- **Python**: Lenguaje de programación utilizado para desarrollar el bot.
-- **discord.py**: Librería de Python que facilita la interacción con la API de Discord.
-- **asyncio**: Librería de Python para manejar tareas asincrónicas, como esperar respuestas de los usuarios.
+- **Python**: Programming language used to develop the bot.
+- **discord.py**: Python library that facilitates interaction with the Discord API.
+- **asyncio**: Python library for handling asynchronous tasks, such as waiting for user responses.
 
 ---
 
-## Instalación
+## Installation
 
-### 1. Clona este repositorio
+### 1. Clone this repository
 
-Para obtener una copia del proyecto, clónalo en tu máquina local:
+To get a copy of the project, clone it to your local machine:
 
 ```bash
 https://github.com/FranciscoLG241/Proyecto-2-Digitalizacion.git
@@ -34,8 +34,8 @@ https://github.com/FranciscoLG241/Proyecto-2-Digitalizacion.git
 ---
 
 
-### 2. Instala las dependencias
-Para instalar las librerías necesarias, usa pip:
+### 2. Install the dependencies
+To install the necessary libraries, use pip:
 
 ```bash
 pip install discord asyncio
@@ -43,27 +43,27 @@ pip install discord asyncio
 
 ---
 
-### 3. Obtén el token de tu bot
-Para que el bot funcione, necesitarás un token de bot de Discord. Si aún no tienes uno, sigue estos pasos:
+### 3. Get your bot token
+To make the bot work, you will need a Discord bot token. If you don’t have one yet, follow these steps:
 
-1. Ve a Discord Developer Portal.
-2. Crea una nueva aplicación y habilita el bot.
-3. Copia el token que te proporciona Discord para tu bot.
+- Go to the [Discord Developer Portal](https://discord.com/developers/applications).
+- Create a new application and enable the bot.
+- Copy the token provided by Discord for your bot.
 
 ---
 
-### 4. Configura el bot
-- Abre el archivo bot.py en un editor de texto.
-Reemplaza la línea TOKEN = "tu_token_aqui" con el token de tu bot que copiaste en el paso anterior:
+### 4. Configure the bot
+- Open the file `bot.py` in a text editor.
+- Replace the following line with your actual bot token:
 
-```bash
-TOKEN = "tu_token_aqui"
+```python
+TOKEN = "your_token_here"
 ```
 
 ---
 
-### 5. Configura las preguntas de trivia
-El bot utiliza un archivo preguntas.json para almacenar las preguntas y respuestas. Asegúrate de que tu archivo preguntas.json contenga preguntas en formato JSON como este ejemplo:
+### 5. Configure the trivia questions
+The bot uses a file called preguntas.json to store the questions and answers. Make sure your preguntas.json file contains questions in JSON format like this example:
 
 ```bash
 [
@@ -77,31 +77,32 @@ El bot utiliza un archivo preguntas.json para almacenar las preguntas y respuest
     }
 ]
 ```
-- Puedes agregar más preguntas en el mismo formato para que el bot tenga variedad.
+- You can add more questions in the same format so the bot has more variety.
 
 ---
 
-### Ejecución
-Una vez que hayas configurado el bot, puedes ejecutarlo con el siguiente comando:
+### Running
+Once you have configured the bot, you can run it with the following command:
 
 ```bash
 python bot.py
 ```
-El bot se conectará a Discord y estará listo para usar. El bot buscará el comando !trivia en los canales donde tenga permisos.
+The bot will connect to Discord and will be ready to use. It will listen for the !trivia command in the channels where it has permissions.
 
 ---
 
-### Uso
-- Comando: !trivia
-- Descripción: El bot elegirá una pregunta al azar y dará 10 segundos para que el jugador responda. Si la respuesta es correcta, se felicita al jugador, y si es incorrecta o el tiempo se agota, se muestra la respuesta correcta.
-- Invitar al bot a tu servidor
-- Si deseas que TriviaBot se una a tu servidor, sigue estos pasos:
+### Usage
+- Command: !trivia
+- Description: The bot will select a random question and give 10 seconds for the player to respond. If the answer is correct, the player is congratulated; if it is incorrect or time runs out, the correct answer is displayed.
+- Invite the bot to your server
+- If you want TriviaBot to join your server, follow these steps:
 
-1. Ve al Discord Developer Portal.
-2. Selecciona tu aplicación de bot.
-3. En la sección de OAuth2, selecciona bot en los "scopes".
-4. En "permissions", marca los permisos que el bot necesita, como Enviar mensajes, Leer mensajes, etc.
-5. Copia el enlace generado y pégalo en tu navegador para invitar al bot a tu servidor.
+1. Go to the Discord Developer Portal.
+2. Select your bot application.
+3. In the OAuth2 section, select "bot" under "scopes".
+4. In "permissions", check the permissions the bot needs, such as Send Messages, Read Messages, etc.
+5. Copy the generated link and paste it into your browser to invite the bot to your server.
+
 
 
 
