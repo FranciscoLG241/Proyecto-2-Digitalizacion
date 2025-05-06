@@ -1,56 +1,51 @@
-## Ciclo de vida del dato (5b)
-1. ¿Cómo se gestionan los datos desde su generación hasta su eliminación en tu proyecto?
-- En el caso de TriviaBot, los datos generados están principalmente relacionados con las preguntas de trivia y las respuestas de los usuarios. 
-El ciclo de vida de estos datos es el siguiente:
+## Data Lifecycle (5b)
+1. **How are the data managed from generation to deletion in your project?**
+- In the case of TriviaBot, the generated data mainly relates to the trivia questions and users' answers. 
+The data lifecycle is as follows:
 
-1. Generación de los datos: Los datos se generan cuando el bot carga el archivo preguntas.json que contiene las preguntas y respuestas de trivia. 
-Estos datos son leídos cada vez que el bot selecciona una pregunta aleatoria.
+1. **Data Generation**: Data is generated when the bot loads the `preguntas.json` file containing trivia questions and answers. 
+This data is read every time the bot selects a random question.
 
-2. Uso de los datos: Cuando un usuario ejecuta el comando !trivia, el bot selecciona una pregunta de los datos y la presenta al usuario. 
-Luego, espera la respuesta del usuario y compara esta respuesta con la correcta.
+2. **Data Usage**: When a user runs the `!trivia` command, the bot selects a question from the data and presents it to the user. 
+It then waits for the user's response and compares it with the correct answer.
 
-3. Eliminación de los datos: Los datos relacionados con las respuestas no se almacenan de forma persistente en el sistema. Una vez que la 
-pregunta se responde (correcta o incorrecta), la interacción termina y no se conserva un historial de respuestas.
-
----
-## Almacenamiento en la nube (5f)
-3. Si no usas la nube, ¿cómo podrías integrarla en futuras versiones?
-- En futuras versiones, se podría considerar el uso de Firebase para almacenar datos de usuarios, historial de respuestas y puntuaciones, 
-lo que permitiría una funcionalidad de clasificación y estadísticas personalizadas. También se podría integrar con bases de datos en la 
-nube como MongoDB o AWS DynamoDB si se necesitara almacenar grandes volúmenes de datos de manera eficiente.
+3. **Data Deletion**: The data related to the answers is not stored persistently in the system. Once the question is answered (correct or incorrect), 
+the interaction ends, and no answer history is retained.
 
 ---
-
-## Seguridad y regulación (5i)
-3. Si no implementaste medidas de seguridad, ¿qué riesgos potenciales identificas y cómo los abordarías en el futuro?
-- El principal riesgo sería que, en una versión futura que maneje información personal, los datos podrían ser manipulados
-o expuestos. Para mitigar este riesgo, se implementaría cifrado de datos, autenticación de usuarios y validación exhaustiva de los datos.
-
----
-
-## Implicación de las THD en negocio y planta (2e)
-3. Si tu proyecto no aplica directamente a negocio o planta, ¿qué otros entornos podrían beneficiarse?
-- TriviaBot podría beneficiar principalmente a entornos educativos o de formación, ayudando a estudiantes a repasar conceptos y a mejorar
-su aprendizaje mediante una forma divertida y entretenida.
+## Cloud Storage (5f)
+3. **If you're not using the cloud, how could you integrate it in future versions?**
+- In future versions, Firebase could be used to store user data, answer history, and scores, 
+which would allow for a leaderboard and customized statistics. It could also be integrated with cloud databases such as MongoDB or AWS DynamoDB 
+if large volumes of data need to be stored efficiently.
 
 ---
-
-## Mejoras en IT y OT (2f)
-3. Si no aplica a IT u OT, ¿cómo podrías adaptarlo para mejorar procesos tecnológicos concretos?
-- TriviaBot podría integrarse con plataformas de educación en línea como Moodle o Google Classroom. El bot podría hacer preguntas sobre
-el contenido de los cursos, exámenes o evaluaciones de los estudiantes, proporcionando una manera interactiva y divertida de repasar temas.
-Además, ayudaría a los estudiantes a mejorar su comprensión del material y a mantenerse comprometidos con el proceso de aprendizaje.
+## Security and Regulation (5i)
+3. **If you have not implemented security measures, what potential risks do you identify and how would you address them in the future?**
+- The main risk would be that, in a future version that handles personal information, the data could be tampered with or exposed. 
+To mitigate this risk, data encryption, user authentication, and thorough data validation would be implemented.
 
 ---
+## Business and Plant Implications (2e)
+3. **If your project does not directly apply to business or plant, what other environments could benefit from it?**
+- TriviaBot could primarily benefit educational or training environments, helping students review concepts and improve 
+their learning in a fun and engaging way.
 
-## Tecnologías Habilitadoras Digitales (2g)
-1. ¿Qué tecnologías habilitadoras digitales (THD) has utilizado o podrías integrar en tu proyecto?
-- En este caso, TriviaBot hace uso de tecnologías habilitadoras digitales simples, como la automatización de interacciones a través de Discord
-y la interacción en tiempo real utilizando APIs de Discord.
+---
+## IT and OT Improvements (2f)
+3. **If it doesn't apply to IT or OT, how could you adapt it to improve specific technological processes?**
+- TriviaBot could be integrated with online education platforms such as Moodle or Google Classroom. The bot could ask questions about 
+the content of courses, exams, or student assessments, providing an interactive and fun way to review topics. 
+Additionally, it would help students improve their understanding of the material and stay engaged with the learning process.
 
-- Para enriquecer un poco mas el bot, se podrían integrar THD como el aprendizaje automático
-para adaptar las preguntas según el nivel de conocimiento del usuario, o incluso procesamiento de lenguaje natural para interpretar las
-respuestas de los usuarios y hacer el bot aún más interactivo.
+---
+## Digital Enabling Technologies (2g)
+1. **What digital enabling technologies (THD) have you used or could integrate into your project?**
+- In this case, TriviaBot uses simple digital enabling technologies, such as automating interactions via Discord 
+and real-time interaction using Discord APIs.
+
+- To further enhance the bot, enabling technologies like machine learning could be integrated to adapt questions based on the user's knowledge level, 
+or even natural language processing to interpret user answers and make the bot even more interactive.
 
 
 
