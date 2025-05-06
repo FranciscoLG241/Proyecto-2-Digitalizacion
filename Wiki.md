@@ -1,109 +1,108 @@
-# **Wiki de TriviaBot**
+# **TriviaBot Wiki**
 
-## **Documentación Técnica**
+## **Technical Documentation**
 
-### **Arquitectura del Proyecto**
+### **Project Architecture**
 
-TriviaBot está desarrollado en **Python 3.8+** y utiliza la librería `discord.py` para interactuar con la API de Discord. El bot permite a los usuarios jugar a un juego de trivia dentro de un servidor de Discord, con preguntas seleccionadas de un archivo JSON. La arquitectura es simple y se basa en tres componentes principales:
+TriviaBot is developed in **Python 3.8+** and uses the `discord.py` library to interact with the Discord API. The bot allows users to play a trivia game within a Discord server, with questions selected from a JSON file. The architecture is simple and is based on three main components:
 
-1. **Comando de trivia (`!trivia`)**: Los usuarios pueden invocar este comando en el servidor para que el bot seleccione una pregunta al azar.
-2. **Gestión del tiempo**: El bot espera 10 segundos para que el usuario responda.
-3. **Evaluación de respuesta**: El bot compara la respuesta del jugador con la correcta y responde de acuerdo al resultado: felicitaciones por la respuesta correcta o la respuesta correcta si el tiempo se agotó o la respuesta fue incorrecta.
+1. **Trivia command (`!trivia`)**: Users can invoke this command on the server for the bot to select a random question.
+2. **Time Management**: The bot waits for 10 seconds for the user to answer.
+3. **Answer Evaluation**: The bot compares the player's answer with the correct one and responds based on the result: congratulations for the correct answer or the correct answer if the time runs out or the answer was incorrect.
 
-### **Tecnologías y Librerías Utilizadas**
-- **Python 3.8+**: El lenguaje de programación utilizado para desarrollar el bot.
-- **discord.py**: Librería para interactuar con la API de Discord y manejar la lógica del bot.
-- **JSON**: Usado para almacenar las preguntas y respuestas del juego, permitiendo una fácil personalización.
+### **Technologies and Libraries Used**
+- **Python 3.8+**: The programming language used to develop the bot.
+- **discord.py**: A library for interacting with the Discord API and handling bot logic.
+- **JSON**: Used to store the trivia questions and answers, allowing easy customization.
 
-### **Flujo de Datos**
-1. **Entrada del usuario**: El jugador utiliza el comando `!trivia` en un canal de Discord.
-2. **Selección de la pregunta**: El bot selecciona una pregunta aleatoria de un archivo `preguntas.json`.
-3. **Interacción**: El bot espera 10 segundos para la respuesta del usuario.
-4. **Evaluación**: Se evalúa la respuesta y el bot responde, felicitando al jugador si la respuesta es correcta o mostrando la correcta si no lo es.
+### **Data Flow**
+1. **User Input**: The player uses the `!trivia` command in a Discord channel.
+2. **Question Selection**: The bot selects a random question from the `preguntas.json` file.
+3. **Interaction**: The bot waits 10 seconds for the user's answer.
+4. **Evaluation**: The answer is evaluated, and the bot responds by congratulating the player if the answer is correct or showing the correct answer if it’s not.
 
-### **Estructura del Proyecto**
-- **bot.py**: El archivo principal que maneja la lógica del bot y las interacciones con Discord.
-- **preguntas.json**: Contiene las preguntas y respuestas en formato JSON. Es el archivo que el bot lee para obtener las preguntas.
-- **config.py** (opcional): Para futuras configuraciones adicionales como la clave de API o ajustes del bot.
+### **Project Structure**
+- **bot.py**: The main file that handles the bot's logic and interactions with Discord.
+- **preguntas.json**: Contains the trivia questions and answers in JSON format. This is the file the bot reads to get the questions.
+- **config.py** (optional): For future additional configurations like the API key or bot settings.
 
-### **Instrucciones de Instalación**
-1. **Clonar el repositorio**:
+### **Installation Instructions**
+1. **Clone the repository**:
     ```bash
     git clone https://github.com/FranciscoLG241/TriviaBot.git
     ```
-2. **Instalar dependencias**:
+2. **Install dependencies**:
     ```bash
     pip install discord
     ```
-3. **Configurar el bot**:
-   - Ve al [Discord Developer Portal](https://discord.com/developers/applications).
-   - Crea una nueva aplicación y habilita el bot.
-   - Obtén el **token de bot** y reemplaza la variable `TOKEN` en el archivo `bot.py` con el token de tu bot.
-   - Personaliza el archivo `preguntas.json` con las preguntas y respuestas para el juego.
+3. **Configure the bot**:
+   - Go to the [Discord Developer Portal](https://discord.com/developers/applications).
+   - Create a new application and enable the bot.
+   - Get the **bot token** and replace the `TOKEN` variable in the `bot.py` file with your bot’s token.
+   - Customize the `preguntas.json` file with questions and answers for the game.
 
-4. **Ejecutar el bot**:
+4. **Run the bot**:
     ```bash
     python bot.py
     ```
-   El bot estará activo y listo para recibir comandos en tu servidor de Discord.
+   The bot will be active and ready to receive commands on your Discord server.
 
 ---
 
 ## **Devlog**
 
-### **1º Fase**
-- **Objetivo estratégico**: Crear un bot funcional para jugar a trivia en servidores de Discord.
-- **Cambios realizados**:
-  - Creación del repositorio y desarrollo de la funcionalidad básica del bot.
-  - El bot responde a comandos `!trivia` y elige una pregunta aleatoria del archivo `preguntas.json`.
-  - El bot permite a los jugadores responder dentro de un límite de 10 segundos.
-  - Implementación de una respuesta al jugador, ya sea felicitaciones por la respuesta correcta o mostrando la respuesta correcta en caso de error o tiempo agotado.
-- **Motivación**: Proporcionar una forma sencilla y divertida de interactuar dentro de los servidores de Discord.
+### **Phase 1**
+- **Strategic Goal**: Create a functional bot to play trivia in Discord servers.
+- **Changes Made**:
+  - Created the repository and developed the basic bot functionality.
+  - The bot responds to the `!trivia` command and selects a random question from the `preguntas.json` file.
+  - The bot allows players to respond within a 10-second time limit.
+  - Implemented a response to the player, either congratulating them for the correct answer or showing the correct answer in case of an incorrect answer or timeout.
+- **Motivation**: Provide a simple and fun way to interact within Discord servers.
 
 ---
 
-### **2º Fase**
-- **Objetivo estratégico**: Mejorar la experiencia del usuario.
-- **Cambios realizados**:
-  - Se agregaron más preguntas y respuestas al archivo `preguntas.json`.
-  - Mejorado el manejo de errores si el archivo `preguntas.json` está mal formado o no existe.
-- **Motivación**: Ampliar la variedad de preguntas y mejorar la robustez del sistema frente a posibles fallos en los datos.
+### **Phase 2**
+- **Strategic Goal**: Improve the user experience.
+- **Changes Made**:
+  - Added more questions and answers to the `preguntas.json` file.
+  - Improved error handling in case the `preguntas.json` file is malformed or missing.
+- **Motivation**: Expand the variety of questions and improve the system's robustness against potential data issues.
 
 ---
 
-### **3º Fase**
-- **Objetivo estratégico**: Mejorar la documentación y facilitar las contribuciones.
-- **Cambios realizados**:
-  - Se documentó el código con comentarios y docstrings.
-  - Se añadió un archivo `CONTRIBUTING.md` que proporciona guías para nuevos colaboradores.
-  - Se realizó la primera publicación del código en GitHub con una versión inicial.
-- **Motivación**: Facilitar que otros desarrolladores contribuyan al proyecto y mejorar la mantenibilidad del código.
+### **Phase 3**
+- **Strategic Goal**: Improve documentation and facilitate contributions.
+- **Changes Made**:
+  - Documented the code with comments and docstrings.
+  - Added a `CONTRIBUTING.md` file that provides guidelines for new contributors.
+  - Made the first public release of the code on GitHub with an initial version.
+- **Motivation**: Make it easier for other developers to contribute to the project and improve the maintainability of the code.
 
 ---
 
-### **4º Fase**
-- **Objetivo estratégico**: Ampliar la flexibilidad y personalización del bot.
-- **Cambios realizados**:
-  - Añadido soporte para que los administradores de los servidores puedan personalizar las preguntas del bot editando el archivo `preguntas.json`.
-  - Se incluyó una pequeña guía en la Wiki sobre cómo agregar preguntas personalizadas.
-- **Motivación**: Permitir que los usuarios personalicen el juego según sus preferencias y agregar más interactividad al bot.
+### **Phase 4**
+- **Strategic Goal**: Expand the bot's flexibility and customization.
+- **Changes Made**:
+  - Added support for server administrators to customize the bot's questions by editing the `preguntas.json` file.
+  - Included a small guide in the Wiki on how to add custom questions.
+- **Motivation**: Allow users to customize the game to their preferences and add more interactivity to the bot.
 
 ---
 
-## **Futuras Mejoras (Propuestas)**
+## **Future Improvements (Proposals)**
 
-1. **Integración con APIs externas**: Conectar TriviaBot con bases de datos de trivia externas como la [Open Trivia Database](https://opentdb.com/) para obtener preguntas más actualizadas y diversas sin necesidad de editar el archivo `preguntas.json` manualmente.
-2. **Soporte multilingüe**: Añadir soporte para múltiples idiomas, permitiendo que el bot sea utilizado en diferentes regiones y comunidades.
-3. **Sistema de puntuación**: Implementar un sistema de puntuación donde los jugadores acumulen puntos por respuestas correctas, y mostrar clasificaciones generales.
-4. **Más opciones de personalización**: Permitir a los administradores configurar no solo las preguntas, sino también el límite de tiempo o la dificultad de las preguntas.
+1. **Integration with external APIs**: Connect TriviaBot with external trivia databases like [Open Trivia Database](https://opentdb.com/) to get more up-to-date and diverse questions without the need to manually edit the `preguntas.json` file.
+2. **Multilingual support**: Add support for multiple languages, allowing the bot to be used in different regions and communities.
+3. **Scoring system**: Implement a scoring system where players accumulate points for correct answers, and display overall rankings.
+4. **More customization options**: Allow administrators to configure not only the questions but also the time limit or the difficulty of the questions.
 
 ---
 
 ### **Changelog**
-- **1º Fase**: Versión inicial del bot.
-- **2º Fase**: Ampliación de preguntas y mejoras en el manejo de errores.
-- **3º Fase**: Documentación del código y publicación en GitHub.
-- **4º Fase**: Añadida la personalización de preguntas.
-
+- **Phase 1**: Initial version of the bot.
+- **Phase 2**: Expanded questions and improved error handling.
+- **Phase 3**: Code documentation and public release on GitHub.
+- **Phase 4**: Added question customization.
 
 
